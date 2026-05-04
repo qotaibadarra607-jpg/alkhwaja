@@ -1,0 +1,240 @@
+<html dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>الخواجة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- قسم الهيدر الرئيسي -->
+<div id="home" style="text-align:center;padding:80px 20px">
+<h1 style="font-size:3em;color:#2c3e50;margin-bottom:20px">الخواجة</h1>
+<p style="font-size:1.5em;color:#666">توصيل سريع لباب البيت</p>
+</div>
+
+<!-- قسم الوجبات -->
+<div id="meals" style="padding:20px">
+<h2 style="text-align:center;font-size:2.5em;color:#2c3e50;margin-bottom:30px">الوجبات المتوفرة</h2>
+
+<div class="meals">
+
+<div class="meal eastern" data-cat="eastern">
+<h3>كباب مشوي</h3>
+<span style="font-size:12px;color:#888;">ID: SF-001</span>
+<img src="500px-Kebab.jpg" alt="كباب مشوي" style="width:100%;max-width:280px;height:200px;object-fit:cover;border-radius:12px;margin:15px 0;box-shadow:0 4px 8px rgba(0,0,0,0.15);">
+<div class="price">110,000 س.ل</div>
+<p>4 قطع لحم • كاس أرز • طبق خضار • 3 بصل • نص كيلو بطاطس</p>
+<button class="btn" onclick="showDetails('SF-001')">التفاصيل</button>
+<button class="btn" id="add-btn-SF-001" onclick="showQuantitySelector('SF-001')">+ إضافة للسلة</button>
+<div id="quantity-SF-001" style="display:none;background:#f8f9fa;padding:10px;margin-top:10px;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:center;gap:15px;">
+<button onclick="changeQuantity('SF-001', -1)" style="background:#e74c3c;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">-</button>
+<span id="qty-display-SF-001" style="font-size:18px;font-weight:bold;min-width:30px;">1</span>
+<button onclick="changeQuantity('SF-001', 1)" style="background:#27ae60;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">+</button>
+</div>
+<button onclick="confirmAddToCart('SF-001')" style="background:#3498db;color:white;border:0;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;">تأكيد الإضافة</button>
+<button onclick="cancelQuantity('SF-001')" style="background:#95a5a6;color:white;border:0;padding:5px 15px;border-radius:6px;cursor:pointer;margin-top:5px;font-size:12px;">إلغاء</button>
+</div>
+<div id="notification-SF-001" style="display:none;background:#d4edda;color:#155724;padding:8px;margin-top:10px;border-radius:5px;font-size:14px;">تمت الإضافة للسلة</div>
+<div id="details-SF-001" style="display:none;background:#f9f9f9;padding:15px;margin-top:10px;border-radius:8px;font-size:13px;text-align:right;">
+<strong>المطبخ:</strong> شرقي - سوري<br>
+<strong>تصنيف الطعام:</strong> وجبات رئيسية<br>
+<strong>المكونات:</strong> لحم بقري طازج، أرز بسمتي، خضار موسمي، بصل، بطاطس<br>
+<strong>طريقة التحضير:</strong> يشوى اللحم على الفحم مع الأرز والخضار
+</div>
+</div>
+
+<div class="meal western" data-cat="western">
+<h3>برجر لحم</h3>
+<span style="font-size:12px;color:#888;">ID: SF-006</span>
+<img src="That-Burger-Place-burger.jpeg" alt="برجر لحم" style="width:100%;max-width:280px;height:200px;object-fit:cover;border-radius:12px;margin:15px 0;box-shadow:0 4px 8px rgba(0,0,0,0.15);">
+<div class="price">85,000 س.ل</div>
+<p>لحم بقري • خبز برجر • جبنة • خس • طماطم • بصل</p>
+<button class="btn" onclick="showDetails('SF-006')">التفاصيل</button>
+<button class="btn" id="add-btn-SF-006" onclick="showQuantitySelector('SF-006')">+ إضافة للسلة</button>
+<div id="quantity-SF-006" style="display:none;background:#f8f9fa;padding:10px;margin-top:10px;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:center;gap:15px;">
+<button onclick="changeQuantity('SF-006', -1)" style="background:#e74c3c;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">-</button>
+<span id="qty-display-SF-006" style="font-size:18px;font-weight:bold;min-width:30px;">1</span>
+<button onclick="changeQuantity('SF-006', 1)" style="background:#27ae60;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">+</button>
+</div>
+<button onclick="confirmAddToCart('SF-006')" style="background:#3498db;color:white;border:0;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;">تأكيد الإضافة</button>
+<button onclick="cancelQuantity('SF-006')" style="background:#95a5a6;color:white;border:0;padding:5px 15px;border-radius:6px;cursor:pointer;margin-top:5px;font-size:12px;">إلغاء</button>
+</div>
+<div id="notification-SF-006" style="display:none;background:#d4edda;color:#155724;padding:8px;margin-top:10px;border-radius:5px;font-size:14px;">تمت الإضافة للسلة</div>
+<div id="details-SF-006" style="display:none;background:#f9f9f9;padding:15px;margin-top:10px;border-radius:8px;font-size:13px;text-align:right;">
+<strong>المطبخ:</strong> غربي - أمريكي<br>
+<strong>تصنيف الطعام:</strong> ساندويش<br>
+<strong>المكونات:</strong> لحم بقري 150غ، خبز برجر، جبنة شيدر، خس، طماطم، بصل<br>
+<strong>طريقة التحضير:</strong> يشوى اللحم على الشواية مع الخضار
+</div>
+</div>
+
+<div class="meal western" data-cat="western">
+<h3>كنتاكي مقرمش</h3>
+<span style="font-size:12px;color:#888;">ID: SF-007</span>
+<img src="طريقة-الكنتاكي-المقرمش.jpg" alt="كنتاكي مقرمش" style="width:100%;max-width:280px;height:200px;object-fit:cover;border-radius:12px;margin:15px 0;box-shadow:0 4px 8px rgba(0,0,0,0.15);">
+<div class="price">95,000 س.ل</div>
+<p>دجاج مقرمش • بطاطس • صلصة خاصة • مشروب</p>
+<button class="btn" onclick="showDetails('SF-007')">التفاصيل</button>
+<button class="btn" id="add-btn-SF-007" onclick="showQuantitySelector('SF-007')">+ إضافة للسلة</button>
+<div id="quantity-SF-007" style="display:none;background:#f8f9fa;padding:10px;margin-top:10px;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:center;gap:15px;">
+<button onclick="changeQuantity('SF-007', -1)" style="background:#e74c3c;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">-</button>
+<span id="qty-display-SF-007" style="font-size:18px;font-weight:bold;min-width:30px;">1</span>
+<button onclick="changeQuantity('SF-007', 1)" style="background:#27ae60;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">+</button>
+</div>
+<button onclick="confirmAddToCart('SF-007')" style="background:#3498db;color:white;border:0;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;">تأكيد الإضافة</button>
+<button onclick="cancelQuantity('SF-007')" style="background:#95a5a6;color:white;border:0;padding:5px 15px;border-radius:6px;cursor:pointer;margin-top:5px;font-size:12px;">إلغاء</button>
+</div>
+<div id="notification-SF-007" style="display:none;background:#d4edda;color:#155724;padding:8px;margin-top:10px;border-radius:5px;font-size:14px;">تمت الإضافة للسلة</div>
+<div id="details-SF-007" style="display:none;background:#f9f9f9;padding:15px;margin-top:10px;border-radius:8px;font-size:13px;text-align:right;">
+<strong>المطبخ:</strong> غربي - أمريكي<br>
+<strong>تصنيف الطعام:</strong> وجبات سريعة<br>
+<strong>المكونات:</strong> 4 قطع دجاج مقرمش، بطاطس كبيرة، صلصة خاصة، مشروب غازي<br>
+<strong>طريقة التحضير:</strong> يقلى الدجاج بالزيت الساخن حتى يصبح مقرمش
+</div>
+</div>
+
+<div class="meal eastern" data-cat="eastern">
+<h3>كبة محشية</h3>
+<span style="font-size:12px;color:#888;">ID: SF-008</span>
+<img src="Kobee_Factory_uvfjv8.avif" alt="كبة محشية" style="width:100%;max-width:280px;height:200px;object-fit:cover;border-radius:12px;margin:15px 0;box-shadow:0 4px 8px rgba(0,0,0,0.15);">
+<div class="price">120,000 س.ل</div>
+<p>كبة محشية باللحم • أرز • سلطة • مخلل</p>
+<button class="btn" onclick="showDetails('SF-008')">التفاصيل</button>
+<button class="btn" id="add-btn-SF-008" onclick="showQuantitySelector('SF-008')">+ إضافة للسلة</button>
+<div id="quantity-SF-008" style="display:none;background:#f8f9fa;padding:10px;margin-top:10px;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:center;gap:15px;">
+<button onclick="changeQuantity('SF-008', -1)" style="background:#e74c3c;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">-</button>
+<span id="qty-display-SF-008" style="font-size:18px;font-weight:bold;min-width:30px;">1</span>
+<button onclick="changeQuantity('SF-008', 1)" style="background:#27ae60;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">+</button>
+</div>
+<button onclick="confirmAddToCart('SF-008')" style="background:#3498db;color:white;border:0;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;">تأكيد الإضافة</button>
+<button onclick="cancelQuantity('SF-008')" style="background:#95a5a6;color:white;border:0;padding:5px 15px;border-radius:6px;cursor:pointer;margin-top:5px;font-size:12px;">إلغاء</button>
+</div>
+<div id="notification-SF-008" style="display:none;background:#d4edda;color:#155724;padding:8px;margin-top:10px;border-radius:5px;font-size:14px;">تمت الإضافة للسلة</div>
+<div id="details-SF-008" style="display:none;background:#f9f9f9;padding:15px;margin-top:10px;border-radius:8px;font-size:13px;text-align:right;">
+<strong>المطبخ:</strong> شرقي - لبناني<br>
+<strong>تصنيف الطعام:</strong> وجبات رئيسية<br>
+<strong>المكونات:</strong> 6 حبات كبة محشية، أرز، سلطة، مخلل<br>
+<strong>طريقة التحضير:</strong> تقلى الكبة بالزيت حتى تنضج وتصبح ذهبية
+</div>
+</div>
+
+<div class="meal side" data-cat="side">
+<h3>ريزوتو دجاج</h3>
+<span style="font-size:12px;color:#888;">ID: SF-009</span>
+<img src="R.jfif" alt="ريزوتو دجاج" style="width:100%;max-width:280px;height:200px;object-fit:cover;border-radius:12px;margin:15px 0;box-shadow:0 4px 8px rgba(0,0,0,0.15);">
+<div class="price">75,000 س.ل</div>
+<p>أرز ريزوتو • دجاج • صلصة كريمية • جبنة بارميزان</p>
+<button class="btn" onclick="showDetails('SF-009')">التفاصيل</button>
+<button class="btn" id="add-btn-SF-009" onclick="showQuantitySelector('SF-009')">+ إضافة للسلة</button>
+<div id="quantity-SF-009" style="display:none;background:#f8f9fa;padding:10px;margin-top:10px;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:center;gap:15px;">
+<button onclick="changeQuantity('SF-009', -1)" style="background:#e74c3c;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">-</button>
+<span id="qty-display-SF-009" style="font-size:18px;font-weight:bold;min-width:30px;">1</span>
+<button onclick="changeQuantity('SF-009', 1)" style="background:#27ae60;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">+</button>
+</div>
+<button onclick="confirmAddToCart('SF-009')" style="background:#3498db;color:white;border:0;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;">تأكيد الإضافة</button>
+<button onclick="cancelQuantity('SF-009')" style="background:#95a5a6;color:white;border:0;padding:5px 15px;border-radius:6px;cursor:pointer;margin-top:5px;font-size:12px;">إلغاء</button>
+</div>
+<div id="notification-SF-009" style="display:none;background:#d4edda;color:#155724;padding:8px;margin-top:10px;border-radius:5px;font-size:14px;">تمت الإضافة للسلة</div>
+<div id="details-SF-009" style="display:none;background:#f9f9f9;padding:15px;margin-top:10px;border-radius:8px;font-size:13px;text-align:right;">
+<strong>المطبخ:</strong> غربي - إيطالي<br>
+<strong>تصنيف الطعام:</strong> مقبلات<br>
+<strong>المكونات:</strong> أرز ريزوتو، صدر دجاج، صلصة كريمية، جبنة بارميزان<br>
+<strong>طريقة التحضير:</strong> يطهى الأرز مع الدجاج والصلصة الكريمية
+</div>
+</div>
+
+<div class="meal side" data-cat="side">
+<h3>وجبة صحية</h3>
+<span style="font-size:12px;color:#888;">ID: SF-010</span>
+<img src="Avoid-obesity-during-the-holidays-800x420.jpg" alt="وجبة صحية" style="width:100%;max-width:280px;height:200px;object-fit:cover;border-radius:12px;margin:15px 0;box-shadow:0 4px 8px rgba(0,0,0,0.15);">
+<div class="price">65,000 س.ل</div>
+<p>سلطة خضار • صدر دجاج مشوي • زيت زيتون • ليمون</p>
+<button class="btn" onclick="showDetails('SF-010')">التفاصيل</button>
+<button class="btn" id="add-btn-SF-010" onclick="showQuantitySelector('SF-010')">+ إضافة للسلة</button>
+<div id="quantity-SF-010" style="display:none;background:#f8f9fa;padding:10px;margin-top:10px;border-radius:8px;">
+<div style="display:flex;align-items:center;justify-content:center;gap:15px;">
+<button onclick="changeQuantity('SF-010', -1)" style="background:#e74c3c;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">-</button>
+<span id="qty-display-SF-010" style="font-size:18px;font-weight:bold;min-width:30px;">1</span>
+<button onclick="changeQuantity('SF-010', 1)" style="background:#27ae60;color:white;border:0;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;">+</button>
+</div>
+<button onclick="confirmAddToCart('SF-010')" style="background:#3498db;color:white;border:0;padding:8px 20px;border-radius:6px;cursor:pointer;margin-top:10px;width:100%;">تأكيد الإضافة</button>
+<button onclick="cancelQuantity('SF-010')" style="background:#95a5a6;color:white;border:0;padding:5px 15px;border-radius:6px;cursor:pointer;margin-top:5px;font-size:12px;">إلغاء</button>
+</div>
+<div id="notification-SF-010" style="display:none;background:#d4edda;color:#155724;padding:8px;margin-top:10px;border-radius:5px;font-size:14px;">تمت الإضافة للسلة</div>
+<div id="details-SF-010" style="display:none;background:#f9f9f9;padding:15px;margin-top:10px;border-radius:8px;font-size:13px;text-align:right;">
+<strong>المطبخ:</strong> عالمي<br>
+<strong>تصنيف الطعام:</strong> مقبلات صحية<br>
+<strong>المكونات:</strong> سلطة خضار متنوعة، صدر دجاج مشوي، زيت زيتون بكر، ليمون<br>
+<strong>طريقة التحضير:</strong> يشوى الدجاج ويخلط مع السلطة والزيت
+</div>
+</div>
+
+</div>
+</div>
+
+<div style="text-align:center;margin:30px 0;display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
+<button class="btn" onclick="openCartModal()" style="padding:15px 40px;font-size:18px;background:#e67e22;"> عرض السلة</button>
+<button class="btn" onclick="continueToOrder()" style="padding:15px 40px;font-size:18px;">متابعة للطلب</button>
+</div>
+
+<!-- نموذج الطلب -->
+<div id="order" style="padding:40px 20px;display:none;">
+<h2 style="text-align:center;font-size:2.2em;color:#2c3e50;margin-bottom:30px">نموذج الطلب</h2>
+
+<form id="customerOrderForm">
+<label>الاسم الكامل:</label>
+<input type="text" id="fullName" placeholder="الاسم الكامل (أحرف عربية فقط)" oninput="validateArabicInput(this)" required>
+
+<label>الرقم الوطني:</label>
+<input type="text" id="nationalId" placeholder="11 خانة (الخانتين الأخيرتان للمحافظة)" maxlength="11" oninput="validateNumbersOnly(this)" required>
+
+<label>تاريخ الميلاد:</label>
+<input type="text" id="birthDate" placeholder="dd-mm-yyyy" maxlength="10" oninput="formatBirthDate(this)" required>
+
+<label>رقم الموبايل:</label>
+<select id="phoneNetwork">
+<option>Syriatel</option>
+<option>MTN</option>
+</select>
+<input type="tel" id="mobileNumber" placeholder="09xxxxxxxx" maxlength="10" oninput="validateNumbersOnly(this)">
+
+<label>الإيميل:</label>
+<input type="email" id="email" placeholder="example@email.com">
+
+<div class="discount">ضريبة 5% ستضاف على المبلغ النهائي</div>
+
+<button type="submit" class="submit-btn">إرسال</button>
+</form>
+</div>
+
+<!-- نافذة عرض السلة -->
+<div id="cartModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center;">
+<div style="background:white;padding:30px;border-radius:15px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto;">
+<h2 style="text-align:center;color:#2c3e50;margin-bottom:20px;">محتويات السلة</h2>
+<div id="cartItems"></div>
+<button onclick="closeCartModal()" class="btn" style="width:100%;margin-top:20px;">إغلاق</button>
+</div>
+</div>
+
+<!-- نافذة ملخص الطلب -->
+<div id="summaryModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center;">
+<div style="background:white;padding:30px;border-radius:15px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto;">
+<h2 style="text-align:center;color:#2c3e50;margin-bottom:20px;">ملخص الطلب</h2>
+<div id="orderSummary"></div>
+<button onclick="closeModal()" class="btn" style="width:100%;margin-top:20px;">إغلاق</button>
+</div>
+</div>
+
+<footer style="text-align:center;margin-top:30px;font-size:0.8em;color:#777;">
+<p>iwp202</p>
+</footer>
+
+<script src="myfunction.js"></script>
+
+</body>
+</html>

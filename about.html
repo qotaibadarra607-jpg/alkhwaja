@@ -1,0 +1,141 @@
+<html dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>الخواجة - من نحن</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.about-section {
+    background: white;
+    padding: 25px;
+    border: 1px solid #e1e8ed;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.about-section h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.about-section p {
+    margin: 12px 0;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.contact-item {
+    margin: 12px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-right: 4px solid #3498db;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-item:hover {
+    background: #e9ecef;
+    transform: translateX(-3px);
+}
+
+.contact-item strong {
+    color: #3498db;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.info-card {
+    background: #27ae60;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(39, 174, 96, 0.2);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(39, 174, 96, 0.3);
+}
+
+.info-card h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.5em;
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 1.1em;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>من نحن</h1>
+
+    <!-- معلومات عامة عن المطعم -->
+    <div class="about-section">
+        <h2>معلومات عامة عن المطعم</h2>
+        <p>مطعم الخواجة هو مطعم عربي أصيل يقدم أشهى الأطباق الشرقية والغربية منذ عام 2010.</p>
+        <p>نتميز بتقديم وجبات طازجة يومية مع مكونات عالية الجودة وأسعار مناسبة للجميع.</p>
+        <p>خدمة التوصيل متوفرة في جميع مناطق المدينة مع ضمان وصول الوجبات ساخنة وفي الوقت المحدد.</p>
+    </div>
+
+    <!-- بطاقات المعلومات -->
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>10+ سنوات</h3>
+            <p>من الخبرة في المجال</p>
+        </div>
+        <div class="info-card">
+            <h3>50+ وجبة</h3>
+            <p> متنوعة ومميزة</p>
+        </div>
+        <div class="info-card">
+            <h3>24/7</h3>
+            <p> خدمة التوصيل</p>
+        </div>
+    </div>
+
+    <!-- معلومات التواصل -->
+    <div class="about-section">
+        <h2>معلومات التواصل</h2>
+        <div class="contact-item">
+            <strong>العنوان:</strong>
+            <span>دمشق، سوريا</span>
+        </div>
+        <div class="contact-item">
+            <strong>الهاتف:</strong>
+            <span>09444555666</span>
+        </div>
+        <div class="contact-item">
+            <strong>الإيميل:</strong>
+            <span>info@alkhawaja.com</span>
+        </div>
+        <div class="contact-item">
+            <strong>ساعات العمل:</strong>
+            <span>يومياً من 10 صباحاً حتى 12 منتصف الليل</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>iwp202</p>
+    </footer>
+</div>
+
+<script src="myfunction.js"></script>
+
+</body>
+</html>

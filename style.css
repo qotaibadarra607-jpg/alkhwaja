@@ -1,0 +1,430 @@
+/* تنسيق عام */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 30px 20px;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* الهيدر */
+nav {
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* شبكة الوجبات */
+.meals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* بطاقة الوجبة */
+.meal {
+    background: white;
+    padding: 25px;
+    border: 1px solid #e1e8ed;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.meal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* السعر */
+.price {
+    font-size: 22px;
+    color: #3498db;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* الأزرار */
+.btn {
+    background: #3498db;
+    color: white;
+    border: 0;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #e67e22;
+    transform: translateY(-1px);
+}
+
+/* الفلتر */
+#filter {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #e1e8ed;
+    background: white;
+    min-width: 200px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+#filter:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* النموذج */
+form {
+    max-width: 450px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* حقول الإدخال */
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border: 1px solid #e1e8ed;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* زر الإرسال */
+.submit-btn {
+    background: #3498db;
+    color: white;
+    border: 0;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #e67e22;
+    transform: translateY(-1px);
+}
+
+/* رسالة الضريبة */
+.discount {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* عداد السلة */
+#cart-count {
+    background: #e67e22;
+    color: white;
+    padding: 5px 12px;
+    float: left;
+    margin-top: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* العناوين */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* أعضاء المجموعة */
+.group-members {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+}
+
+.member-card {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 20px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.member-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.member-id {
+    color: #546e7a;
+    font-size: 0.95em;
+    margin-top: 5px;
+}
+
+/* رابط النشر */
+.publish-link {
+    background: #e9ecef;
+    padding: 20px;
+    margin: 25px 0;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+/* الملاحظات */
+.notes {
+    background: #d1ecf1;
+    padding: 20px;
+    margin-top: 25px;
+    border-right: 4px solid #17a2b8;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* الروابط */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media(max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* أعضاء المجموعة يصبحون عمودي */
+    .group-members {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .member-card {
+        max-width: 100%;
+        min-width: auto;
+        width: 100%;
+    }
+
+    nav {
+        padding: 15px 10px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .notes {
+        padding: 15px;
+    }
+
+    .publish-link {
+        padding: 15px;
+    }
+
+    .meals {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    /* صفحة الوجبات */
+    #home {
+        padding: 40px 15px !important;
+    }
+
+    #home h1 {
+        font-size: 2em !important;
+    }
+
+    #home p {
+        font-size: 1.2em !important;
+    }
+
+    #meals h2 {
+        font-size: 1.8em !important;
+    }
+
+    .meal img {
+        max-width: 100% !important;
+        height: 160px !important;
+    }
+
+    #order {
+        padding: 20px 10px !important;
+    }
+
+    #order h2 {
+        font-size: 1.6em !important;
+    }
+
+    form {
+        padding: 20px 15px;
+        margin: 30px auto;
+    }
+
+    /* صفحة من نحن */
+    .about-section {
+        padding: 15px !important;
+    }
+
+    .about-section h2 {
+        font-size: 1.3em !important;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .info-card {
+        padding: 15px !important;
+    }
+
+    .contact-item {
+        padding: 10px !important;
+        font-size: 14px !important;
+    }
+}
+
+@media(max-width: 480px) {
+    h1 {
+        font-size: 1.3em;
+    }
+
+    nav a {
+        margin: 0 5px;
+        padding: 5px 8px;
+        font-size: 13px;
+    }
+
+    #cart-count {
+        float: none;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    /* صفحة الوجبات */
+    #home {
+        padding: 25px 10px !important;
+    }
+
+    #home h1 {
+        font-size: 1.5em !important;
+    }
+
+    #home p {
+        font-size: 1em !important;
+    }
+
+    #meals h2 {
+        font-size: 1.4em !important;
+    }
+
+    .meal img {
+        height: 140px !important;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* صفحة من نحن */
+    .info-card h3 {
+        font-size: 1.2em !important;
+    }
+}
